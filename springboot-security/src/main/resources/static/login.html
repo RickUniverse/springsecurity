@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>login in</h1>
+    <form method="post" action="/user/login">
+
+        <!--开启了csrf ，跨站请求伪造
+            login.html 文件必须在 templates 目录下才能使用thymeleaf解析
+        -->
+<!--        <input type="hidden"th:if="${_csrf}!=null"th:value="${_csrf.token}"name="_csrf"/>-->
+<!--        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">-->
+
+        <input type="text" name="username">
+        <br>
+        <input type="password" name="password">
+        <br>
+        记住我：<input type="checkbox" name="remember-me" title="remember-me">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
